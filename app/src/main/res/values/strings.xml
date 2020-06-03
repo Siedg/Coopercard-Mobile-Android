@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Coopercard Mobile - Android</string>
+    <string name="appTitle">Cooper Card</string>
+    <string name="addCard">ADICIONAR CARTÃO</string>
+    <string name="changePassword">ALTERAR SENHA</string>
+    <string name="changeName">ALTERAR APELIDO</string>
+    <string name="removeCard">REMOVER CARTÃO</string>
+    <string name="cardName">APELIDO</string>
+    <string name="limit">LIMITE</string>
+    <string name="cardLastDigits">FINAL DO CARTÃO</string>
+    <string name="details">DETALHES</string>
+</resources>
