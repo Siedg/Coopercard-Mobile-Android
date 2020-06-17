@@ -9,9 +9,9 @@
     <string name="limit">LIMITE</string>
     <string name="cardLastDigits">FINAL DO CARTÃO</string>
     <string name="details">DETALHES</string>
-    <string name="apelido">Apelido</string>
-    <string name="limite">Limite</string>
-    <string name="limitAmount">R$%1$f</string>
-    <string name="cardNumber">CardNumber</string>
+    <string name="apelido">APELIDO</string>
+    <string name="limite">LIMITE</string>
+    <string name="limitAmount">R$%1$.2f</string>
+    <string name="cardNumber">**** %1$d</string>
     <string name="balance">Saldo</string>
 </resources>

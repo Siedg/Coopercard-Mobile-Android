@@ -5,10 +5,8 @@ import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.BaseAdapter
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.siedg.coopercardmobile_android.R
 import com.siedg.coopercardmobile_android.data.Card
 import kotlinx.android.synthetic.main.cardlist_layout.view.*
@@ -21,9 +19,14 @@ class CardAdapter(val context: Context) : RecyclerView.Adapter<CardAdapter.Custo
         fun bind(card: Card) {
             itemView.apply {
                 cardName.text = card.name
-                cardNumber.text = card.card_number.toString()
+                cardNumber.text = context.getString(R.string.cardNumber, card.card_number)
                 limitAmount.text = context.getString(R.string.limitAmount, card.limit)
-                cardNumber.setBackgroundColor(Color.parseColor(card.category.background_color))
+                cardNumber.setTextColor(Color.parseColor(card.category.background_color))
+                view.setBackgroundColor(Color.parseColor(card.category.background_color))
+
+                Glide.with(cardImage)
+                    .load(card.category.image_path)
+                    .into(cardImage)
 
                 if (card.category.type == "gift") {
                     limitText.text = context.getString(R.string.balance)
