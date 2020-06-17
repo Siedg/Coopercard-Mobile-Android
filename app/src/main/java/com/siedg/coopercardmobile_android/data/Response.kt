@@ -7,7 +7,7 @@ data class CardsListResult(val cards: List<Card>)
 
 data class Card(
     val name: String,
-    val card_number: Int,
+    val card_number: String,
     val limit: Float,
     val category: Category
 )

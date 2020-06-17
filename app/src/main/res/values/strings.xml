@@ -12,6 +12,6 @@
     <string name="apelido">APELIDO</string>
     <string name="limite">LIMITE</string>
     <string name="limitAmount">R$%1$.2f</string>
-    <string name="cardNumber">**** %1$d</string>
-    <string name="balance">Saldo</string>
+    <string name="cardNumber">**** %s</string>
+    <string name="balance">SALDO</string>
 </resources>
