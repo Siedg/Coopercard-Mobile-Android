@@ -2,12 +2,16 @@ package com.siedg.coopercardmobile_android.data
 
 import android.util.Log
 import com.google.gson.Gson
+import timber.log.Timber
 import java.net.URL
 
 class Request {
-    fun run(): CardsListResult {
-        val cardsRepoListJson = URL("https://raw.githubusercontent.com/policante/Coopercard-mobile/master/service/cards.json").readText()
-        Log.d(javaClass.simpleName, cardsRepoListJson)
-        return Gson().fromJson(cardsRepoListJson, CardsListResult::class.java)
+    companion object {
+        fun run(): CardsListResult {
+            val cardListJson =
+                URL("https://raw.githubusercontent.com/policante/Coopercard-mobile/master/service/cards.json").readText()
+            //Log.d("Result", cardListJson)
+            return Gson().fromJson(cardListJson, CardsListResult::class.java)
+        }
     }
 }
