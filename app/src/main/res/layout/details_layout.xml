@@ -128,7 +128,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/changeNickCard"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="30dp">
+        android:layout_marginBottom="30dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="100dp"
@@ -171,7 +176,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/deteCardCard"
         app:layout_constraintStart_toEndOf="@+id/changePassCard"
-        android:layout_marginBottom="30dp">
+        android:layout_marginBottom="30dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="100dp"
@@ -214,7 +224,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/changeNickCard"
         android:layout_marginBottom="30dp"
-        >
+        app:cardCornerRadius="4dp"
+        app:cardElevation="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="100dp"

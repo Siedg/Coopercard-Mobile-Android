@@ -6,50 +6,69 @@
     android:layout_height="match_parent"
     tools:context="com.siedg.coopercardmobile_android.ui.MainActivity">
 
-    <Button
-        android:id="@+id/addCardButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/addCard"
-        android:textColor="@color/cooperGreen"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/cardList"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintTop_toBottomOf="@+id/toolbarCooperCard"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        />
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarCooperCard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#D92EB24E"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        android:background="@color/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintVertical_chainStyle="packed"
         app:layout_constraintVertical_bias="0"
-        app:layout_constraintBottom_toTopOf="@+id/addCardButton"
+        app:layout_constraintBottom_toTopOf="@+id/nestedScrollView"
         app:layout_constraintTop_toTopOf="parent"
         app:title="@string/appTitle" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/cardList"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        tools:listitem="@layout/cardlist_layout"
-        android:scrollbars="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarCooperCard"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addCardButton"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/nestedScrollView"
+        android:fillViewport="true">
 
-    />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/addCardButton"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:text="@string/addCard"
+                android:textSize="18sp"
+                android:elevation="4dp"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/cardList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/addCardButton"
+                tools:listitem="@layout/cardlist_layout"
+                android:nestedScrollingEnabled="false"
+                android:layout_marginTop="9dp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

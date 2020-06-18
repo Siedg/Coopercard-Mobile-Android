@@ -3,7 +3,9 @@ package com.siedg.coopercardmobile_android.ui
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.siedg.coopercardmobile_android.R
 import com.siedg.coopercardmobile_android.data.Card
 import com.siedg.coopercardmobile_android.data.Request
@@ -24,10 +26,15 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        val layoutManager = LinearLayoutManager(this)
+
         cardList.apply {
-            setLayoutManager(layoutManager)
+            setHasFixedSize(true)
+            layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
             adapter = CardAdapter(context, ::onCardClick)
+        }
+
+        addCardButton.setOnClickListener {
+
         }
     }
 
