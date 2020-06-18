@@ -13,7 +13,7 @@
     <string name="cardLimit">R$%1$.2f</string>
     <string name="cardNumber">**** %s</string>
     <string name="lastDigits">%s</string>
-    <string name="balance">SALDO</string>
+    <string name="cardBalance">SALDO</string>
     <string name="changePass">ALTERAR SENHA</string>
     <string name="changeNick">ALTERAR APELIDO</string>
 </resources>

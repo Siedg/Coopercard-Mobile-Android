@@ -10,7 +10,6 @@ import com.bumptech.glide.Glide
 import com.siedg.coopercardmobile_android.R
 import com.siedg.coopercardmobile_android.data.Card
 import kotlinx.android.synthetic.main.cardlist_layout.view.*
-import kotlin.reflect.KFunction1
 
 
 class CardAdapter(
@@ -33,7 +32,7 @@ class CardAdapter(
                     .into(cardImage)
 
                 if (card.category.type == "gift") {
-                    limitText.text = context.getString(R.string.balance)
+                    limitText.text = context.getString(R.string.cardBalance)
                 }
 
                 setOnClickListener{

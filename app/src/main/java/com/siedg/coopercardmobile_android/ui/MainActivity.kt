@@ -3,7 +3,6 @@ package com.siedg.coopercardmobile_android.ui
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.siedg.coopercardmobile_android.R
@@ -26,7 +25,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-
         cardList.apply {
             setHasFixedSize(true)
             layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
@@ -34,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         addCardButton.setOnClickListener {
-
+            //TODO
         }
     }
 
