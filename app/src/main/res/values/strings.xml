@@ -6,12 +6,14 @@
     <string name="changeName">ALTERAR APELIDO</string>
     <string name="removeCard">REMOVER CARTÃO</string>
     <string name="cardName">APELIDO</string>
-    <string name="limit">LIMITE</string>
-    <string name="cardLastDigits">FINAL DO CARTÃO</string>
-    <string name="details">DETALHES</string>
-    <string name="apelido">APELIDO</string>
-    <string name="limite">LIMITE</string>
-    <string name="limitAmount">R$%1$.2f</string>
+    <string name="cardLimitText">LIMITE</string>
+    <string name="lastDigitsText">FINAL DO CARTÃO</string>
+    <string name="details">Detalhes</string>
+    <string name="cardNick">APELIDO</string>
+    <string name="cardLimit">R$%1$.2f</string>
     <string name="cardNumber">**** %s</string>
+    <string name="lastDigits">%s</string>
     <string name="balance">SALDO</string>
+    <string name="changePass">ALTERAR SENHA</string>
+    <string name="changeNick">ALTERAR APELIDO</string>
 </resources>

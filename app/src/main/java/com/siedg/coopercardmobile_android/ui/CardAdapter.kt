@@ -10,17 +10,21 @@ import com.bumptech.glide.Glide
 import com.siedg.coopercardmobile_android.R
 import com.siedg.coopercardmobile_android.data.Card
 import kotlinx.android.synthetic.main.cardlist_layout.view.*
+import kotlin.reflect.KFunction1
 
 
-class CardAdapter(val context: Context) : RecyclerView.Adapter<CardAdapter.CustomViewHolder>() {
+class CardAdapter(
+    private val context: Context,
+    private val onCardClick: (card: Card) -> Unit
+) : RecyclerView.Adapter<CardAdapter.CustomViewHolder>() {
     private val items: MutableList<Card> = mutableListOf()
 
-    class CustomViewHolder(row: View) : RecyclerView.ViewHolder(row) {
+    inner class CustomViewHolder(row: View) : RecyclerView.ViewHolder(row) {
         fun bind(card: Card) {
             itemView.apply {
                 cardName.text = card.name
                 cardNumber.text = context.getString(R.string.cardNumber, card.card_number)
-                limitAmount.text = context.getString(R.string.limitAmount, card.limit)
+                limitAmount.text = context.getString(R.string.cardLimit, card.limit)
                 cardNumber.setTextColor(Color.parseColor(card.category.background_color))
                 view.setBackgroundColor(Color.parseColor(card.category.background_color))
 
@@ -33,7 +37,7 @@ class CardAdapter(val context: Context) : RecyclerView.Adapter<CardAdapter.Custo
                 }
 
                 setOnClickListener{
-
+                    onCardClick(card)
                 }
             }
         }

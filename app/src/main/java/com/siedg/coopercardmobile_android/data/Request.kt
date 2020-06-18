@@ -8,7 +8,6 @@ class Request {
         fun run(): CardsListResult {
             val cardListJson =
                 URL("https://raw.githubusercontent.com/policante/Coopercard-mobile/master/service/cards.json").readText()
-            //Log.d("Result", cardListJson)
             return Gson().fromJson(cardListJson, CardsListResult::class.java)
         }
     }
